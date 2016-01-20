@@ -1,7 +1,7 @@
 var main = angular.module("crypto", []);
 
 main.controller("main", ["$scope", "$http", function(s,h) {
-	h.get("files/users.php").success(function(data, status, headers, config) {
+	h.get("php/users.php").success(function(data, status, headers, config) {
 		s.people = data;
 	});
 

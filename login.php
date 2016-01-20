@@ -3,7 +3,7 @@
 		$uname = $_POST['uname'];
 		$pass = $_POST['pass'];
 		// look up the user name
-		$con = mysqli_connect('localhost', 'root', 'therealsam', 'crypto');
+		$con = mysqli_connect('localhost', 'root', '', 'crypto');
 		$qry = mysqli_query($con, "SELECT * FROM users WHERE uname = '$uname' AND pass = '$pass' ");
 		$no = mysqli_num_rows($qry);
 		if($no < 1) {
